@@ -13,7 +13,7 @@ class SecurityResult:
             request: dict,
             raw_request: bytes | None,
             raw_result: bytes | None,
-            result: dict[str, Any] | None
+            result: dict[str, Any] | None,
     ):
         self.request = request
         self.raw_request = raw_request
