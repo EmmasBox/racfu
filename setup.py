@@ -89,7 +89,7 @@ def main():
                 ),
                 extra_link_args=["-m64", "-Wl,-b,edit=no"],
                 extra_objects=[f"{assembled_object_path}"],
-            )
+            ),
         ],
         "cmdclass": {"build_ext": build_with_asm_ext},
     }
