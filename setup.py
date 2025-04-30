@@ -55,7 +55,7 @@ def generate_json_schema_header() -> None:
         )
 
 
-class build_with_asm_ext(build_ext):
+class BuildWithASMExt(build_ext):
     """Build Python extension that includes assembler code."""
     def run(self):
         os.environ["CC"] = "ibm-clang64"
@@ -91,7 +91,7 @@ def main():
                 extra_objects=[f"{assembled_object_path}"],
             ),
         ],
-        "cmdclass": {"build_ext": build_with_asm_ext},
+        "cmdclass": {"build_ext": BuildWithASMExt},
     }
     setup(**setup_args)
 
