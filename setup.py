@@ -37,7 +37,7 @@ def assemble(asm_file: str, asm_directory: Path) -> None:
 def generate_json_schema_header() -> None:
     """Generate RACFu JSON schema header."""
     schema_absolute_path = Path.cwd() / "schema.json"
-    with open(schema_absolute_path, "r") as f:
+    with open(schema_absolute_path) as f:
         schema = json.dumps(json.load(f), separators=(",", ":"))
     schema_header_absolute_path = Path.cwd() / "racfu" / "racfu_schema.hpp"
     with open(schema_header_absolute_path, "w") as f:
