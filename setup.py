@@ -51,7 +51,7 @@ def generate_json_schema_header() -> None:
                     "",
                     "#endif",
                 ],
-            )
+            ),
         )
 
 
