@@ -80,3 +80,6 @@ select = [
 
 [tool.setuptools.package-data]
 sear = ["LICENSE", "NOTICES"]
+
+# This is required for dynamic versioning to work
+[tool.setuptools_scm]
